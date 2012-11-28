@@ -16,4 +16,8 @@ public class CheckoutEntry {
 		return description;
 	}
 
+	public BigDecimal getPrice() {
+		return price;
+	}
+
 }
