@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry including="**/*Test.java" kind="src" path="test"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7"/>
+	<classpathentry kind="lib" path="D:/userdata/wegner/workspace/libs/mockito-all-1.9.5-rc1.jar"/>
+	<classpathentry kind="lib" path="lib/junit4.11/junit-4.11.jar" sourcepath="lib/junit4.11/junit-4.11-src.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="file:/D:/userdata/wegner/workspace/CheckoutKata/CheckoutKata/lib/junit4.11/javadoc/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
