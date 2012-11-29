@@ -1,4 +1,4 @@
-package pl.wegner.checkout;
+package pl.wegner.checkout.data;
 
 import java.math.BigDecimal;
 
