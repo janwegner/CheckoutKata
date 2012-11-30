@@ -2,6 +2,12 @@ package pl.wegner.checkout.data;
 
 import java.math.BigDecimal;
 
+/**
+ * Contains data with calculation of checkin entry.
+ * 
+ * @author Jan Wegner (jan.s.wegner[at]gmail.com)
+ *
+ */
 public class CheckoutEntry {
 
 	private String description;
@@ -19,5 +25,4 @@ public class CheckoutEntry {
 	public BigDecimal getPrice() {
 		return price;
 	}
-
 }

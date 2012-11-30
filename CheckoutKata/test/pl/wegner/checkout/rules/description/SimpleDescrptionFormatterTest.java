@@ -7,11 +7,15 @@ import java.math.BigDecimal;
 
 import org.junit.Test;
 
-public class StandartDescrptionFormatterTest {
+/**
+ * @author Jan Wegner (jan.s.wegner[at]gmail.com)
+ * 
+ */
+public class SimpleDescrptionFormatterTest {
 
 	@Test
 	public void assertDescriptionForOneItem() {
-		StandartDescriptionFormatter descriptionFormatter = new StandartDescriptionFormatter(
+		SimpleDescriptionFormatter descriptionFormatter = new SimpleDescriptionFormatter(
 				"A");
 
 		String formattedDescription = descriptionFormatter
@@ -22,7 +26,7 @@ public class StandartDescrptionFormatterTest {
 
 	@Test
 	public void assertDescriptionForTwoItem() {
-		StandartDescriptionFormatter descrptionFormatter = new StandartDescriptionFormatter(
+		SimpleDescriptionFormatter descrptionFormatter = new SimpleDescriptionFormatter(
 				"B");
 
 		String formattedDescription = descrptionFormatter

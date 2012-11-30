@@ -7,6 +7,10 @@ import java.math.BigDecimal;
 
 import org.junit.Test;
 
+/**
+ * @author Jan Wegner (jan.s.wegner[at]gmail.com)
+ * 
+ */
 public class MultiPricedDescriptionFormatterTest {
 
 	@Test

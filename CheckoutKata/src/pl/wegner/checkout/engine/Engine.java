@@ -13,6 +13,15 @@ import pl.wegner.checkout.rules.MultiPricedPayingRule;
 import pl.wegner.checkout.rules.PayingRuleBase;
 import pl.wegner.checkout.rules.SimpleItemPayingRule;
 
+/**
+ * Used to perform actual calculations based on given rules and ckeckin entries.
+ * 
+ * Must be used for checouts for one klient only and rules recreated after and
+ * new instance used next. While addding next items we can check current status.
+ * 
+ * @author Jan Wegner (jan.s.wegner[at]gmail.com)
+ * 
+ */
 public class Engine {
 
 	private final Map<String, SimpleItemPayingRule> simpleRulesMap;
@@ -24,15 +33,6 @@ public class Engine {
 			List<MultiPricedPayingRule> multiPricedRules) {
 		this.simpleRulesMap = createMapFromSimpleRules(simpleItemRules);
 		this.multiPricedRulesMap = createMapFromSimpleRules(multiPricedRules);
-	}
-
-	private <T extends PayingRuleBase> Map<String, T> createMapFromSimpleRules(
-			List<T> simpleItemRules) {
-		Map<String, T> rules = new HashMap<>(simpleItemRules.size());
-		for (T payingRule : simpleItemRules) {
-			rules.put(payingRule.getSkuCode(), payingRule);
-		}
-		return rules;
 	}
 
 	public void addItem(CheckinEntry checkinEntry) {
@@ -59,6 +59,16 @@ public class Engine {
 			result = result.add(calculatedSimpleCheckoutValue.getPrice());
 		}
 	}
+	
+	private <T extends PayingRuleBase> Map<String, T> createMapFromSimpleRules(
+			List<T> simpleItemRules) {
+		Map<String, T> rules = new HashMap<>(simpleItemRules.size());
+		for (T payingRule : simpleItemRules) {
+			rules.put(payingRule.getSkuCode(), payingRule);
+		}
+		return rules;
+	}
+
 
 	public BigDecimal getCurrentValue() {
 		return result;

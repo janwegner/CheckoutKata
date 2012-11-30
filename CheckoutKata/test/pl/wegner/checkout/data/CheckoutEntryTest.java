@@ -10,7 +10,7 @@ import pl.wegner.checkout.data.CheckoutEntry;
 import static org.hamcrest.Matchers.*;
 
 /**
- * @author wegner
+ * @author Jan Wegner (jan.s.wegner[at]gmail.com)
  * 
  */
 public class CheckoutEntryTest {
@@ -33,4 +33,5 @@ public class CheckoutEntryTest {
 
 		assertThat(entry.getPrice(), equalTo(price));
 	}
+	
 }

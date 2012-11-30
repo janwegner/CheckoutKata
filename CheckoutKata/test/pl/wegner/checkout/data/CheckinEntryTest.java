@@ -7,6 +7,10 @@ import org.junit.Test;
 
 import pl.wegner.checkout.data.CheckinEntry;
 
+/**
+ * @author Jan Wegner (jan.s.wegner[at]gmail.com)
+ * 
+ */
 public class CheckinEntryTest {
 
 	@Test
@@ -36,6 +40,6 @@ public class CheckinEntryTest {
 
 	@Test(expected = IllegalArgumentException.class)
 	public void shouldThrownExceptionIfNotPositiveAmountSpecified() {
-		new CheckinEntry("A", 0);
+		new CheckinEntry("A", -1);
 	}
 }

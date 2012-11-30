@@ -2,6 +2,13 @@ package pl.wegner.checkout.rules.description;
 
 import java.math.BigDecimal;
 
+/**
+ * 
+ * Used to format description of multi-priced rule
+ * 
+ * @author Jan Wegner (jan.s.wegner[at]gmail.com)
+ *
+ */
 public class MultiPricedDescriptionFormatter implements DescriptionFormatter {
 
 	private final String skuCode;

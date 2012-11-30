@@ -20,6 +20,9 @@ public class CheckinEntry {
 	 * 
 	 * @param skuCode
 	 *            Code of product
+	 * @oaram amount amount of product must be grater than zero
+	 *            
+	 * @throws IllegalArgumentException is specified amount is non positive
 	 */
 	public CheckinEntry(String skuCode, int amount) {
 		validateIfAmountIsPositive(amount);

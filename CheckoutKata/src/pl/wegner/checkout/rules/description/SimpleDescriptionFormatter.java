@@ -2,11 +2,18 @@ package pl.wegner.checkout.rules.description;
 
 import java.math.BigDecimal;
 
-public class StandartDescriptionFormatter implements DescriptionFormatter {
+/**
+ * 
+ * Used to format description of simple rule
+ * 
+ * @author Jan Wegner (jan.s.wegner[at]gmail.com)
+ *
+ */
+public class SimpleDescriptionFormatter implements DescriptionFormatter {
 
 	private String skuCode;
 
-	public StandartDescriptionFormatter(String skuCode) {
+	public SimpleDescriptionFormatter(String skuCode) {
 		this.skuCode = skuCode;
 
 	}

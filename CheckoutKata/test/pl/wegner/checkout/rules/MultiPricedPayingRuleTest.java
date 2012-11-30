@@ -11,6 +11,10 @@ import pl.wegner.checkout.data.CheckinEntry;
 import pl.wegner.checkout.data.CheckoutEntry;
 import pl.wegner.checkout.rules.descrption.DescriptionFormatterMock;
 
+/**
+ * @author Jan Wegner (jan.s.wegner[at]gmail.com)
+ * 
+ */
 public class MultiPricedPayingRuleTest {
 
 	@Test

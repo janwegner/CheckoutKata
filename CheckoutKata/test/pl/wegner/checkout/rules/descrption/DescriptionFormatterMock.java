@@ -2,6 +2,10 @@ package pl.wegner.checkout.rules.descrption;
 
 import java.math.BigDecimal;
 
+/**
+ * @author Jan Wegner (jan.s.wegner[at]gmail.com)
+ * 
+ */
 import pl.wegner.checkout.rules.description.DescriptionFormatter;
 
 public class DescriptionFormatterMock implements DescriptionFormatter {

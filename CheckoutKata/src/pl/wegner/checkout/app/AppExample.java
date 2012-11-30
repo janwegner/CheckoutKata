@@ -10,6 +10,13 @@ import pl.wegner.checkout.engine.Engine;
 import pl.wegner.checkout.rules.MultiPricedPayingRule;
 import pl.wegner.checkout.rules.SimpleItemPayingRule;
 
+/**
+ * Class is not included as part of CheckoutKata system. Its purpose is to
+ * briefly describe architecture and usage of application.
+ * 
+ * @author Jan Wegner (jan.s.wegner[at]gmail.com)
+ * 
+ */
 public class AppExample {
 
 	public static void main(String... args) {

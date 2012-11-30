@@ -14,6 +14,10 @@ import pl.wegner.checkout.data.CheckinEntry;
 import pl.wegner.checkout.rules.MultiPricedPayingRule;
 import pl.wegner.checkout.rules.SimpleItemPayingRule;
 
+/**
+ * @author Jan Wegner (jan.s.wegner[at]gmail.com)
+ * 
+ */
 public class EngineTest {
 
 	@Test

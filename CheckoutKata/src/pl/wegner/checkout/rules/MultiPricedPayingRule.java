@@ -7,10 +7,26 @@ import pl.wegner.checkout.data.CheckoutEntry;
 import pl.wegner.checkout.rules.description.DescriptionFormatter;
 import pl.wegner.checkout.rules.description.MultiPricedDescriptionFormatter;
 
+/**
+ * Rule used to calculate priced of bonus pack. Used for situation, where when
+ * you buy n products of "A", then price is y.
+ * 
+ * This rule keep his state, so when proper value of items with specified
+ * skuCode comes in summary, than bonus is calculated. Same object should not be
+ * reused for other clients - only to generate one bill.
+ * 
+ * Rule return price in checkout equal zero, if not enough items of this product
+ * is given. If it was already eought, value lower than zero is return as
+ * described below: x - normal item price y - price for bonus pack n - items in
+ * bonus pack return value for bonus = y - n*x
+ * 
+ * @author Jan Wegner (jan.s.wegner[at]gmail.com)
+ * 
+ */
 public class MultiPricedPayingRule extends PayingRuleBase {
 
 	private static final CheckoutEntry EMPTY_ENTRY = new CheckoutEntry("",
-			new BigDecimal(0));
+			BigDecimal.ZERO);
 	private final int amountOfItemsForBonus;
 	private final BigDecimal mountOfBonusPerPack;
 	private final DescriptionFormatter descriptionFormatter;
